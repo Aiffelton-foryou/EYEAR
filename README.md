@@ -1,14 +1,20 @@
 # 널위한 동행
 시각장애인을 동행하며 돕겠다는 의미 + 너를 위한다는 의미
+- 팀원 소개 및 역할
 
-### 널위행 프로젝트는??!
-- 프로젝트에 대한 간략적인 설명 적기
+# 1. 프로젝트 소개
+### 문제정의
+- ㅇㅇㅇㅇㅇㅇ
+
+### 프로젝트 목표
+-  ㅇㅇㅇㅇㅇㅇ
 
 ### skill
 react , django, python, opencv, tensorflow, pytorch, 
 
 
-### 프로젝트 구성
+### 프로젝트 구성 
+- modeling
 - classificaton 사용하여 분류
 - Tacotron v2  + waveglow 사용
 - react, django 웹 페이지 개발
