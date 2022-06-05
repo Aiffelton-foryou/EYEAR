@@ -23,6 +23,7 @@
 <img src="https://img.shields.io/badge/Opencv-5C3EE8?style=plastic&logo=Opencv&logoColor=white">
 <img src="https://img.shields.io/badge/Tensorflow-FF6F00?style=plastic&logo=Tensorflow&logoColor=white">
 <img src="https://img.shields.io/badge/Pytorch-EE4C2C?style=plastic&logo=Pytorch&logoColor=white">
+  <img src="https://img.shields.io/badge/Colab-F9AB00?style=plastic&logo=Colab&logoColor=white">
 </div>
 
 ### 문제 정의
