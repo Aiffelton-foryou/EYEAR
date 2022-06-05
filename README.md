@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=rect&color=A3DCBE&height=300&section=header&text=프로젝트:EYEAR&fontSize=90)
+![header](https://capsule-render.vercel.app/api?type=rect&color=FFD700&height=300&section=header&text=프로젝트:EYEAR&fontSize=90)
 
 ### 프로젝트 소개
 시각장애인(저시력, 색각 이상)의 오프라인 쇼핑을 보조하기 위해 상품명을 읽어주는 서비스
