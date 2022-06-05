@@ -24,9 +24,16 @@ react , django, python, opencv, tensorflow, pytorch,
 - classification - tensorflow v2 , python 3.9 
 - react v18, django최신버전, 
 
+### Web Service 
+<img src='https://user-images.githubusercontent.com/58939359/172043495-7b0fa1d5-acc9-4b50-a4bc-e1f8c7f9e637.png' width='500' height='500'>
+
 
 ### 널위행 상품 알리미 서비스 (웹페이지 구동 방식 - 이미지로 표현)
 <img src="https://user-images.githubusercontent.com/58939359/172042822-b943ce33-3847-42ed-86f7-b750acf59033.png"  width="500" height="370">
+
+### 상품 인식 단계
+1. 카메라로 상품을 촬영하면 해당 상품이 무엇인지 결과가 음성으로 출력된다.
+
 
 ### Reference
 https://github.com/melonicedlatte/multi-speaker-tacotron-tensorflow
