@@ -93,27 +93,8 @@ npm start
 
 
 ### Web Service Structure
-```
-start_flask.py (우리가 실행하는 메인 파일)
-flask_deep
-		|____ static (asset, css, image등을 관리하는 폴더)
-		|				|____ images (유저가 올린 charatcter content image가 저장되는 곳)
-		|				|____ inference_images (모델 적용 후 character transfer image가 저장되는 곳)
-		|				|____ testA(유저가 올린 background content image가 저장되는 곳)
-		|				|____ testB(유저가 올린 background style image가 저장되는 곳)
-		|
-		|____ template (html 파일 관리)
-	  |       |____ index.html (메인페이지)
-		|				|____ b_style_transfer.html (백그라운드 스타일 변환 초기 페이지)
-		|				|____ bst_post.html (백그라운드 스타일 변환 적용 후 페이지)
-		|				|____ c_style_transfer.html (캐릭터 스타일 변환 초기 페이지)
-		|				|____ cst_post.html (캐릭터 스타일 변환 적용 후 페이지)
-		|				|____ case.html(아직 깃에 올라가있지 않음(merge 예정), 모델 아웃풋 보여주는 페이지(bst_post, cst_post)에서 버튼을 누를 시 여기로 옴-> 핸드폰 케이스 생성하는 페이지)
-		|
-		|____ __init__.py (flask 웹페이지 관리하는 파일 라우터 등이 여기서 작성됨)
-    
-```
-<!-- <img src='https://user-images.githubusercontent.com/58939359/172043495-7b0fa1d5-acc9-4b50-a4bc-e1f8c7f9e637.png' width='500' height='500'> -->
+
+<img src='https://user-images.githubusercontent.com/58939359/172043495-7b0fa1d5-acc9-4b50-a4bc-e1f8c7f9e637.png' width='500' height='500'>
 
 
 ### 널위행 상품 알리미 서비스 (웹페이지 구동 방식 - 동영상 넣기 )
