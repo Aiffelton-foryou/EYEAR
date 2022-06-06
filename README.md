@@ -97,8 +97,7 @@ npm start
 
 
 ## Web Service Structure
-
-<img src='https://user-images.githubusercontent.com/58939359/172043495-7b0fa1d5-acc9-4b50-a4bc-e1f8c7f9e637.png' width='500' height='500'>
+<img src='https://user-images.githubusercontent.com/58939359/172155172-1c162767-bb69-4f0f-a788-e607edc36a67.png' width='500' height='500'>
 
 
 ## 널위행 상품 알리미 서비스 (웹페이지 구동 방식 - 동영상 넣기 )
