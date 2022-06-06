@@ -1,5 +1,6 @@
 ![header](https://capsule-render.vercel.app/api?type=rect&color=FFD700&height=300&section=header&text=프로젝트:EYEAR&fontSize=90)
 
+#### EYEAR 의미
 눈(Eye)과 귀(Ear)를 이어준다는 뜻
 
 ### 프로젝트 소개
@@ -11,7 +12,7 @@
 |이름|구성|역할|
 |:---:|:---:|:---:|
 |최재무|팀장|프로젝트 총괄, 모델링 구현, Model Tuning|
-|임현진|팀원|데이터 수집, 모델링 구현|
+|임현진|팀원|데이터 수집, 모델링 구현, Model Tuning|
 |노태경|팀원|환경 구축, 데이터 수집, 전처리|
 |서우린|팀원|데이터 수집, Web Service Backend |
 |심연진|팀원|데이터 전처리, TTS 모델링|
@@ -38,23 +39,23 @@
 
 ### 프로젝트 구성 
 1. 개발 환경 구축
-- tensorflow v2 , Pytorch 환경 구축
+	- tensorflow v2 , Pytorch 환경 구축
 
 2.  데이터 수집
-- AI Hub 데이터셋 
-- 실제 데이터셋 추가 수집
+	- AI Hub 데이터셋 
+	- 실제 데이터셋 추가 수집
 
 3. 데이터 전처리 및 증강
-- random crop, rotate 활용 데이터 증강
+	- random crop, rotate 활용 데이터 증강
 
 4. 모델링 및 Tuning
-- Classification 모델링
-- Tacotron + Wavwglow 모델링
-- Tuning
+	- Classification 모델링
+	- Tacotron + Wavwglow 모델링
+	- Tuning
 
 5. Web Service 개발
-- React, Django 환경 구축
-- Server 개발 및 ???
+	- React, Django 환경 구축
+	- Server 개발 및 ???
 
 
 
