@@ -67,15 +67,27 @@
   - Waveglow
 
 ### Installation
-Clone this repo:
+1. Clone this repo:
 ```
-git clone https://
+git clone https://github.com/Aiffelton-foryou/Model.git
 cd Model
 ```
+2. Create Env
+```
+python3 -m venv myenv
+myenv/Scripts/activate
+```
+3. Start Server
+```
+cd mypj
+python manage.py runserver 서버주소:8000
+```
+4. Start Web
+```
+cd FontEnd
+npm start
+```
 
-
-- 프로젝트 동작하기 위한 가상환경 설정 
-- 우린님 가상환경 부분 넣기
 - 주의사항: 경로를 절대경로로 지정되어 있기 때문에 수정 필요
 	- 수정해야 하는 부분 명시하기
 
