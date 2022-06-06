@@ -1,0 +1,3 @@
+#!C:\djreact\myenv\Scripts\python.exe
+from numba.pycc import main
+main()
