@@ -46,6 +46,7 @@
 	- 실제 데이터셋 추가 수집
 
 3. 데이터 전처리 및 증강
+	- 실제 데이터셋 전처리
 	- random crop, rotate 활용 데이터 증강
 
 4. 모델링 및 Tuning
@@ -55,7 +56,7 @@
 
 5. Web Service 개발
 	- React, Django 환경 구축
-	- Server 개발 및 ???
+	- Server 개발 및 Model 기능
 
 
 
@@ -97,7 +98,7 @@ npm start
 
 
 ## Web Service Structure
-<img src='https://user-images.githubusercontent.com/58939359/172155172-1c162767-bb69-4f0f-a788-e607edc36a67.png' width='500' height='500'>
+<img src='https://user-images.githubusercontent.com/58939359/172155172-1c162767-bb69-4f0f-a788-e607edc36a67.png' width='700' height='500'>
 
 
 ## 널위행 상품 알리미 서비스 (웹페이지 구동 방식 - 동영상 넣기 )
