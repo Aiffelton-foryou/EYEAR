@@ -3,10 +3,10 @@
 #### EYEAR 의미
 눈(Eye)과 귀(Ear)를 이어준다는 뜻
 
-## 프로젝트 소개
+## 프로젝트 소개 
 시각장애인(저시력, 색각 이상)의 오프라인 쇼핑을 보조하기 위해 상품명을 읽어주는 서비스
 
-### 팀원 소개 및 역할
+### 팀원 소개 및 역할 :wave:
 - 팀명: 널위한 동행 (널위행)
 
 |이름|구성|역할|
@@ -56,7 +56,7 @@
 
 5. Web Service 개발
 	- React, Django 환경 구축
-	- Server 개발 및 Model 기능
+	- Server 개발 및 기능 구현
 
 
 
@@ -93,9 +93,6 @@ cd FontEnd
 npm start
 ```
 
-- 주의사항: 경로를 절대경로로 지정되어 있기 때문에 수정 필요
-	- 수정해야 하는 부분 명시하기
-
 
 ## Web Service Structure
 <img src='https://user-images.githubusercontent.com/58939359/172155172-1c162767-bb69-4f0f-a788-e607edc36a67.png' width='700' height='500'>
@@ -111,4 +108,5 @@ https://www.tensorflow.org/api_docs/python/tf/keras/applications/resnet?hl=ko
 https://qwlake.github.io/django/2020/07/01/apply-https-on-django-server-with-nginx/
 https://github.com/danielgatis/rembg
 https://melonicedlatte.com/machinelearning/2018/07/02/215933.html
+https://hcnoh.github.io/2018-12-11-tacotron
 <br>
