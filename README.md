@@ -50,7 +50,7 @@
 
 4. 모델링 및 Tuning
 	- Classification 모델링
-	- Tacotron + Wavwglow 모델링
+	- Tacotron + Waveglow 모델링
 	- Tuning
 
 5. Web Service 개발
@@ -62,6 +62,9 @@
 ### Function
 - Classification
   - ResNet101
+
+- Augmentataion
+	- 
 - TTS
   - Tacotron
   - Waveglow
@@ -82,7 +85,7 @@ myenv/Scripts/activate
 cd mypj
 python manage.py runserver 서버주소:8000
 ```
-4. Start Web
+4. Start Web Page
 ```
 cd FontEnd
 npm start
