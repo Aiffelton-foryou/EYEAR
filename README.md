@@ -67,7 +67,17 @@
   - Waveglow
 
 ### Installation
-- 프로젝트 사용할 때 version 설정 어떻게 해야 할지 작성
+Clone this repo:
+```
+git clone https://
+cd Model
+```
+
+
+- 프로젝트 동작하기 위한 가상환경 설정 
+- 우린님 가상환경 부분 넣기
+- 주의사항: 경로를 절대경로로 지정되어 있기 때문에 수정 필요
+	- 수정해야 하는 부분 명시하기
 
 
 ### Web Service Structure
@@ -94,7 +104,7 @@ flask_deep
 <!-- <img src='https://user-images.githubusercontent.com/58939359/172043495-7b0fa1d5-acc9-4b50-a4bc-e1f8c7f9e637.png' width='500' height='500'> -->
 
 
-### 널위행 상품 알리미 서비스 (웹페이지 구동 방식 - 이미지로 표현)
+### 널위행 상품 알리미 서비스 (웹페이지 구동 방식 - 동영상 넣기 )
 <img src="https://user-images.githubusercontent.com/58939359/172042822-b943ce33-3847-42ed-86f7-b750acf59033.png"  width="500" height="370">
 
 
