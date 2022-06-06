@@ -1,5 +1,7 @@
 ![header](https://capsule-render.vercel.app/api?type=rect&color=FFD700&height=300&section=header&text=프로젝트:EYEAR&fontSize=90)
 
+눈(Eye)과 귀(Ear)를 이어준다는 뜻
+
 ### 프로젝트 소개
 시각장애인(저시력, 색각 이상)의 오프라인 쇼핑을 보조하기 위해 상품명을 읽어주는 서비스
 
@@ -14,7 +16,7 @@
 |서우린|팀원|데이터 수집, Web Service Backend |
 |심연진|팀원|데이터 전처리, TTS 모델링|
 
-<div align=center>
+<div>
 <h3>:hammer_and_wrench: 기술 스택 :hammer_and_wrench: </h3>
 
 <img src="https://img.shields.io/badge/React-61DAFB?style=plastic&logo=React&logoColor=white">
@@ -67,15 +69,32 @@
 - 프로젝트 사용할 때 version 설정 어떻게 해야 할지 작성
 
 
-### Web Service 
-<img src='https://user-images.githubusercontent.com/58939359/172043495-7b0fa1d5-acc9-4b50-a4bc-e1f8c7f9e637.png' width='500' height='500'>
+### Web Service Structure
+```
+start_flask.py (우리가 실행하는 메인 파일)
+flask_deep
+		|____ static (asset, css, image등을 관리하는 폴더)
+		|				|____ images (유저가 올린 charatcter content image가 저장되는 곳)
+		|				|____ inference_images (모델 적용 후 character transfer image가 저장되는 곳)
+		|				|____ testA(유저가 올린 background content image가 저장되는 곳)
+		|				|____ testB(유저가 올린 background style image가 저장되는 곳)
+		|
+		|____ template (html 파일 관리)
+	  |       |____ index.html (메인페이지)
+		|				|____ b_style_transfer.html (백그라운드 스타일 변환 초기 페이지)
+		|				|____ bst_post.html (백그라운드 스타일 변환 적용 후 페이지)
+		|				|____ c_style_transfer.html (캐릭터 스타일 변환 초기 페이지)
+		|				|____ cst_post.html (캐릭터 스타일 변환 적용 후 페이지)
+		|				|____ case.html(아직 깃에 올라가있지 않음(merge 예정), 모델 아웃풋 보여주는 페이지(bst_post, cst_post)에서 버튼을 누를 시 여기로 옴-> 핸드폰 케이스 생성하는 페이지)
+		|
+		|____ __init__.py (flask 웹페이지 관리하는 파일 라우터 등이 여기서 작성됨)
+    
+```
+<!-- <img src='https://user-images.githubusercontent.com/58939359/172043495-7b0fa1d5-acc9-4b50-a4bc-e1f8c7f9e637.png' width='500' height='500'> -->
 
 
 ### 널위행 상품 알리미 서비스 (웹페이지 구동 방식 - 이미지로 표현)
 <img src="https://user-images.githubusercontent.com/58939359/172042822-b943ce33-3847-42ed-86f7-b750acf59033.png"  width="500" height="370">
-
-### 상품 인식 단계
-1. 카메라로 상품을 촬영하면 해당 상품이 무엇인지 결과가 음성으로 출력된다.
 
 
 ### Reference
@@ -83,5 +102,5 @@ https://github.com/melonicedlatte/multi-speaker-tacotron-tensorflow
 https://www.tensorflow.org/api_docs/python/tf/keras/applications/resnet?hl=ko
 https://qwlake.github.io/django/2020/07/01/apply-https-on-django-server-with-nginx/
 https://github.com/danielgatis/rembg
-
+https://melonicedlatte.com/machinelearning/2018/07/02/215933.html
 <br>
