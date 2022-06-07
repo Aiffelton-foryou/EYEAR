@@ -117,8 +117,8 @@ npm start
 <img src='https://user-images.githubusercontent.com/58939359/172155172-1c162767-bb69-4f0f-a788-e607edc36a67.png' width='700' height='500'>
 
 
-## 널위행 상품 알리미 서비스 (웹페이지 구동 방식 - 동영상 넣기 )
-<img src="https://user-images.githubusercontent.com/58939359/172042822-b943ce33-3847-42ed-86f7-b750acf59033.png"  width="500" height="370">
+## 널위행 상품 알리미 서비스
+<img src='https://user-images.githubusercontent.com/59944296/172346386-10c4179d-f127-4f98-8393-c6b11df2cad6.jpg'  width="500" height="370">
 
 
 ### Reference
