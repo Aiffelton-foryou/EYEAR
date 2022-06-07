@@ -21,8 +21,8 @@ defaults = {
     # Data Parameters             #
     ################################
     'load_mel_from_disk':False,
-    'training_files':'filelists/HJ_text.txt',
-    'validation_files':'filelists/HJ_text.txt',
+    'training_files':'filelists/train.txt',
+    'validation_files':'filelists/val.txt',
     'text_cleaners':"['korean_cleaners']",  ##한글을 사용하려면 "['korean_cleaners']"   -> str 형태로 입력해야 함
                                             ##영어를 사용하려면 "['english_cleaners']"
     ################################
@@ -77,7 +77,7 @@ defaults = {
     'learning_rate':1e-3,
     'weight_decay':1e-6,
     'grad_clip_thresh':1.0,
-    'batch_size':1,
+    'batch_size':32,
     'gradient_accumulation_steps':2,
     'mask_padding':True  # set model's padded outputs to padded values
 }

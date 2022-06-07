@@ -7,5 +7,3 @@ scipy==1.0.0
 Unidecode==1.0.22
 numba==0.48
 pillow
-
-python train.py   --output_directory=output   --log_directory=log   --n_gpus=1   --training_files=filelists/train_filelist.txt    --validation_files=filelists/train_filelist.txt   --epochs=10
