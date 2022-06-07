@@ -118,7 +118,7 @@ npm start
 
 
 ## 널위행 상품 알리미 서비스
-<img src='https://user-images.githubusercontent.com/59944296/172346386-10c4179d-f127-4f98-8393-c6b11df2cad6.jpg'  width="500" height="370">
+<img src='https://user-images.githubusercontent.com/59944296/172346386-10c4179d-f127-4f98-8393-c6b11df2cad6.jpg'  width="600" height="400">
 
 
 ### Reference
