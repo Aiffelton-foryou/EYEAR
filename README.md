@@ -72,6 +72,15 @@
   - Waveglow
 
 ## Installation
+
+|Model|link|
+|:---:|:---:|
+|Tacotron|[link](https://drive.google.com/drive/folders/1JKXMoHIbQvI5Hiooj7RVw0e2odRY4x1W?usp=sharing)|
+|Waveglow|[link](https://drive.google.com/drive/folders/1ItXFLu4Sn6JKLcZsbxPCSls_NtSzBXEO?usp=sharing)|
+|Web_env|[link](https://drive.google.com/drive/folders/1CjOO7Rvm8-UWUcHx5o6p8zadeR_FX1ox?usp=sharing)|
+|classification|[link](https://drive.google.com/drive/folders/1TXwWIwKOcQlDCdLN-5gUZzQ6Id-9bPu6?usp=sharing)|
+
+
 1. Clone this repo:
 ```
 git clone https://github.com/Aiffelton-foryou/Model.git
