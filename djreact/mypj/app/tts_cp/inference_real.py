@@ -188,7 +188,7 @@ waveglow_checkpoint = r'D:\nullwehang\Model\djreact\mypj\app\tts_cp\HJ_waveglow_
 synthesizer = Synthesizer(tacotron2_checkpoint, waveglow_checkpoint)
 
 def sound_infer(text):
-    sample_text = f"예측 결과는 {text}입니다."
+    sample_text = f"해당 상품은 {text}입니다."
     audio, sampling_rate = synthesizer.inference(sample_text)
     return audio,sampling_rate
 ## 음성 저장하기

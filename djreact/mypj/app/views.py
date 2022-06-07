@@ -15,6 +15,7 @@ import numpy as np
 import uuid
 from .tts_cp.inference_real import sound_infer
 import soundfile as sf
+import unicodedata as un
 # Create your views here.
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
@@ -108,8 +109,7 @@ class infer(APIView):
             print('예측결과',pred,acc)
             '''결과로 db 검색''' 
             # result = SelectView(qr)
-            
-            
+            pred = un.normalize('NFD',pred)
 
             '''검색결과 tts로 response'''
             audio,sampling_rate = sound_infer(pred) # inferenced name
