@@ -7,9 +7,9 @@ import argparse
 import soundfile as sf
 
 ## WaveGlow 프로젝트 위치 설정
-sys.path.append(r'D:\nullwehang\djreact\mypj\app\tts_cp\waveglow')
+sys.path.append(r'D:\nullwehang\Model\djreact\mypj\app\tts_cp\waveglow')
 ## Tacontron2 프로젝트 위치 설정
-sys.path.append(r'D:\nullwehang\djreact\mypj\app\tts_cp\waveglow\tacotron2')
+sys.path.append(r'D:\nullwehang\Model\djreact\mypj\app\tts_cp\waveglow\tacotron2')
 
 ## 프로젝트 라이브러리 Import
 from hparams import defaults
@@ -52,7 +52,7 @@ class Synthesizer:
         
         self.tacotron = model
         
-        with open(r'D:\nullwehang\djreact\mypj\app\tts_cp\waveglow\config.json',encoding='UTF-8') as f:
+        with open(r'D:\nullwehang\Model\djreact\mypj\app\tts_cp\waveglow\config.json',encoding='UTF-8') as f:
             data = f.read()
         config = json.loads(data)
         waveglow_config = config["waveglow_config"]
@@ -181,8 +181,8 @@ sample_phrase = """
 # audio, sampling_rate = synthesizer.inference(sample_text)
 # ## 음성 저장하기
 # sf.write('HJ_학교 믹스.wav', audio, sampling_rate)
-tacotron2_checkpoint = r'D:\nullwehang\djreact\mypj\app\tts_cp\HJ_checkpoint_360000'
-waveglow_checkpoint = r'D:\nullwehang\djreact\mypj\app\tts_cp\HJ_waveglow_390000'
+tacotron2_checkpoint = r'D:\nullwehang\Model\djreact\mypj\app\tts_cp\HJ_checkpoint_360000'
+waveglow_checkpoint = r'D:\nullwehang\Model\djreact\mypj\app\tts_cp\HJ_waveglow_390000'
 
     ## 음성 합성 모듈 생성
 synthesizer = Synthesizer(tacotron2_checkpoint, waveglow_checkpoint)
