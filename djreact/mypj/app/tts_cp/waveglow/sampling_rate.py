@@ -31,7 +31,7 @@ def load_audio(file_path, sr=22050):
         raise ValueError("Unsupported preprocess method : {0}".format(ext))
         
     return wav, sr
-
+# 공백 자르기의 경우 잘 정제되지 않아 공백이 많은 데이터를 한번에 정리해주기는 편하지만, 지나치게 타이트하게 잘리면서 발성이 잘려 이상하게 전처리 될 위험이 있어 사용하지 않음. Audacity 등의 프로그램을 통해 직접 전처리해 주었다.
 # 공백 자르기(패딩 추가)
 def trim_audio(wav, top_db=10, pad_len=4000):
     """
@@ -50,22 +50,22 @@ def trim_audio(wav, top_db=10, pad_len=4000):
     
     return wav
 
-## WAV 그려보기
-def plot_wav(wav, sr):
-    ## 그려보기
-    plt.figure(1)
+# ## WAV 그려보기
+# def plot_wav(wav, sr):
+#     ## 그려보기
+#     plt.figure(1)
 
-    plot_a = plt.subplot(211)
-    plot_a.plot(wav)
-    plot_a.set_xlabel('sample rate * time')
-    plot_a.set_ylabel('energy')
+#     plot_a = plt.subplot(211)
+#     plot_a.plot(wav)
+#     plot_a.set_xlabel('sample rate * time')
+#     plot_a.set_ylabel('energy')
 
-    plot_b = plt.subplot(212)
-    plot_b.specgram(wav, NFFT=1024, Fs=sr, noverlap=900)
-    plot_b.set_xlabel('Time')
-    plot_b.set_ylabel('Frequency')
+#     plot_b = plt.subplot(212)
+#     plot_b.specgram(wav, NFFT=1024, Fs=sr, noverlap=900)
+#     plot_b.set_xlabel('Time')
+#     plot_b.set_ylabel('Frequency')
 
-    plt.show()
+#     plt.show()
 
 
 ## 시작하기(train)
@@ -76,12 +76,12 @@ sampling_rate = 22050
 decibel=10
 
 ## Wav 파일 읽어오기  pcm 또는 다른 확장자도 사용 가능.
-root_path = 'C:/Users/금정산1_PC15/Desktop/workspace/waveglow/tacotron2/HJ_recorded/'
+root_path = 'C:/Users/금정산1_PC15/Desktop/workspace/waveglow/tacotron2/KSS_train_origin'
 file_list = glob.glob(os.path.join(root_path, "*.wav"))
 # file_list = glob.glob(os.path.join(root_path, "*.pcm"))
 
 ## 저장할 위치 선택
-save_path = 'C:/Users/금정산1_PC15/Desktop/workspace/waveglow/tacotron2/HJ_data'
+save_path = 'C:/Users/금정산1_PC15/Desktop/workspace/waveglow/tacotron2/kss_train'
 os.makedirs(save_path, exist_ok=True)
 
 for file_path in tqdm(file_list):
@@ -100,10 +100,11 @@ for file_path in tqdm(file_list):
 
 print("슝=3")
 
+# 아래는 val에 대해 처리했던 코드. 파일명만 바꾸어주면 되어서 크게 차이 없다.
 # ## 시작하기(val)
 
 # ## Wav 파일 읽어오기  pcm 또는 다른 확장자도 사용 가능.
-# root_path = 'C:/Users/금정산1_PC15/Desktop/workspace/waveglow/tacotron2/kss_val_origin/'
+# root_path = 'C:/Users/금정산1_PC15/Desktop/workspace/waveglow/tacotron2/KSS_val_origin/'
 # file_list = glob.glob(os.path.join(root_path, "*.wav"))
 # # file_list = glob.glob(os.path.join(root_path, "*.pcm"))
 

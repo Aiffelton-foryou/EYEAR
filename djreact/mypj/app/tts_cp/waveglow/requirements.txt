@@ -1,10 +1,11 @@
-# torch==1.0
-matplotlib==2.1.0
-tensorflow
-numpy==1.13.3
-inflect==0.2.5
-librosa==0.6.0
-scipy==1.0.0
-tensorboardX==1.1
-Unidecode==1.0.22
-pillow
+# # torch==1.0
+# matplotlib==2.1.0
+# tensorflow
+# numpy==1.13.3
+# inflect==0.2.5
+# librosa==0.6.0
+# scipy==1.0.0
+# tensorboardX==1.1
+# Unidecode==1.0.22
+# pillow
+버전 정보 생략하고 그냥 라이브러리 명으로 다운받아야 합니다.

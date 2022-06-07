@@ -69,25 +69,44 @@
   - rotate
 - TTS
   - Tacotron
-  - Waveglow
+  - [Waveglow](https://github.com/Aiffelton-foryou/EYEAR/tree/main/djreact/mypj/app/tts_cp/waveglow)
 
 ## Installation
+
+|Model|link|
+|:---:|:---:|
+|Tacotron|[link](https://drive.google.com/drive/folders/1JKXMoHIbQvI5Hiooj7RVw0e2odRY4x1W?usp=sharing)|
+|Waveglow|[link](https://drive.google.com/drive/folders/1ItXFLu4Sn6JKLcZsbxPCSls_NtSzBXEO?usp=sharing)|
+|Web_env|[link](https://drive.google.com/drive/folders/1CjOO7Rvm8-UWUcHx5o6p8zadeR_FX1ox?usp=sharing)|
+|classification|[link](https://drive.google.com/drive/folders/1TXwWIwKOcQlDCdLN-5gUZzQ6Id-9bPu6?usp=sharing)|
+
+
 1. Clone this repo:
 ```
-git clone https://github.com/Aiffelton-foryou/Model.git
-cd Model
+git clone https://github.com/Aiffelton-foryou/EYEAR.git
+cd EYEAR
 ```
 2. Create Env
 ```
 python3 -m venv myenv
 myenv/Scripts/activate
 ```
-3. Start Server
+3. download checkpoint
+```
+#waveglow checkppoint
+mv waveglow djreact/mypj/app/tts_cp/waveglow/checkpoint
+
+#tacotron checkpoint
+mv tacotron djreact/mypj/app/tts_cp/waveglow/tacotron2/output
+```
+
+4. Start Server
 ```
 cd mypj
 python manage.py runserver 서버주소:8000
 ```
-4. Start Web Page
+
+5. Start Web Page
 ```
 cd FontEnd
 npm start
@@ -98,8 +117,8 @@ npm start
 <img src='https://user-images.githubusercontent.com/58939359/172155172-1c162767-bb69-4f0f-a788-e607edc36a67.png' width='700' height='500'>
 
 
-## 널위행 상품 알리미 서비스 (웹페이지 구동 방식 - 동영상 넣기 )
-<img src="https://user-images.githubusercontent.com/58939359/172042822-b943ce33-3847-42ed-86f7-b750acf59033.png"  width="500" height="370">
+## 널위행 상품 알리미 서비스
+<img src='https://user-images.githubusercontent.com/59944296/172346386-10c4179d-f127-4f98-8393-c6b11df2cad6.jpg'  width="600" height="400">
 
 
 ### Reference

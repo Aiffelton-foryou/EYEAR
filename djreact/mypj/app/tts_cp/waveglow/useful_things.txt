@@ -1,35 +1,31 @@
-# train code 
+- 첨부해둔 Checkpoint들(Waveglow의 checkpoints 파일의 v100_waveglow_360000, v100_waveglow_370000 및 Tacotron2의 output 파일의 v100_checkpoint_336000, v100_checkpoint_348000)은 KSS 아나운서 데이터 (https://www.kaggle.com/datasets/bryanpark/korean-single-speaker-speech-dataset)를 train:val=95:5 비율(12208개 : 642개)로 나누어 각각 360000 iteration, 370000 iteration, 336000 iteration, 348000 iteration 학습시킨 것입니다.
+- 기본적인 세팅은 https://github.com/JoungheeKim/tacotron2 깃헙 코드의 기본값을 사용하고 있으나, waveglow의 learning rate의 경우 gradient overflow 문제를 해결하기 위해 1e-5로 정정하였습니다. 따라서 해당 체크포인트를 이어받아 학습하실 때는 learning rate를 1e-5로 맞추어 주시는 것을 권장드립니다.
+- 해당 체크포인트를 pre-train으로 사용하여 개인적으로 녹음한 목소리를 합성하였을 때, 음색이 비슷한 여성의 목소리 파일 50개 가량의 경우 반나절~하루의 학습으로 학습된 문장에 대해서 상당한 수준의 성능을 보였으나, 남성 목소리 파일의 경우 문장이 뭉개지는 등 성능이 좋지 못했습니다. 추가녹음하여 합성한 목소리를 내고 싶을 때는 성별을 통일하거나 데이터셋을 처음부터 하나의 성별로 만드는 것을 추천드립니다.
+
+# Tacotron2 train code 
 python train.py    --output_directory=output    --log_directory=log    --n_gpus=1    --training_files=filelists/train.txt     --validation_files=filelists/val.txt    --epochs=500
-타코트론2+waveglow base 자료 포스팅
-https://joungheekim.github.io/2021/04/02/code-review/
+
 
 #train code에서 저장경로 지정해주기
-python train.py    --output_directory=output    --log_directory=log    --n_gpus=1    --training_files=C:/Users/금정산1_PC15/Desktop/workspace/waveglow/tacotron2/filelists/HJ_data.txt    --epochs=500 --checkpoint_path=C:/Users/금정산1_PC15/Desktop/workspace/waveglow/tacotron2/output/v100_checkpoint_336000     --validation_files=C:/Users/금정산1_PC15/Desktop/workspace/waveglow/tacotron2/filelists/HJ_data.txt    --epochs=500 --checkpoint_path=C:/Users/금정산1_PC15/Desktop/workspace/waveglow/tacotron2/output/v100_checkpoint_336000 --output_directory=D:/taco_HJ_checkpoint
+python train.py    --output_directory=C:/Users/금정산1_PC15/Desktop/workspace/waveglow/tacotron2/checkpoints    --log_directory=log    --n_gpus=1    --training_files=C:/Users/금정산1_PC15/Desktop/workspace/waveglow/tacotron2/filelists/train.txt    --epochs=50000 --checkpoint_path=C:/Users/금정산1_PC15/Desktop/workspace/waveglow/tacotron2/output/checkpoint_360000     --validation_files=C:/Users/금정산1_PC15/Desktop/workspace/waveglow/tacotron2/filelists/val.txt
 
-그뭐냐 그래프 확인
-기본 경로에서 ((dronedrone) C:\Users\금정산1_PC15\Desktop\workspace\waveglow>  여기)
-tensorboard --logdir=C:\Users\금정산1_PC15\Desktop\workspace\waveglow\tacotron2\output\log
-(log폴더경로)
-해주면됨.
+#tensorboard로 alignment(그래프) 확인
 
-waveglow 돌리기
+1. anaconda prompt 관리자 모드 실행
+2. 가상환경에 library, pytorch 등이 깔려있다면 conda activate (가상환경 이름) (ex. conda activate dronedrone)
+3. waveglow가 있는 경로로 이동 (ex. C:\Users\금정산1_PC15\Desktop\workspace\waveglow)
+4. tensorboard --logdir=C:\Users\금정산1_PC15\Desktop\workspace\waveglow\tacotron2\output\log 명령어 실행
+waveglow가 있는 경로에서(ex. C:\Users\금정산1_PC15\Desktop\workspace\waveglow)
+
++@
+타코트론2+waveglow base 자료(포스팅)
+https://joungheekim.github.io/2021/04/02/code-review/
+
+#Waveglow 돌리기
 python train.py -c config.json
 
-한방에 돌리기
-python train.py    --output_directory=output    --log_directory=log    --n_gpus=1    --training_files=filelists/train.txt     --validation_files=filelists/val.txt    --epochs=10000
-
-오늘은 순두부 찌개를 먹었따  =-= 
-생각보다 양이 많았따 
-햄치즈 순두부 
-
-tensorboard --logdir=C:\Users\금정산1_PC15\Desktop\workspace\waveglow\tacotron2\output\log
-
-waveglow tensorboard도 checkpoint 경로로 받으면 됨
+#Waveglow tensorboard도 checkpoint 경로로 받으면 됨
 tensorboard --logdir=C:\Users\금정산1_PC15\Desktop\workspace\waveglow\checkpoints
 
-waveglow checkpoint 불러오기
-"checkpoint_path": "C:/Users/금정산1_PC15/Desktop/workspace/waveglow/checkpoints/waveglow_5000",
-
-'filter_length':1024
-'hop_length':256'
-'win_length':1024
+#Waveglow checkpoint 불러오기
+config.json 파일 내에 "checkpoint_path": "C:/Users/금정산1_PC15/Desktop/workspace/waveglow/checkpoints/waveglow_5000" 추가
