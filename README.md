@@ -69,7 +69,7 @@
   - rotate
 - TTS
   - Tacotron
-  - Waveglow
+  - [Waveglow](https://github.com/Aiffelton-foryou/EYEAR/tree/main/djreact/mypj/app/tts_cp/waveglow)
 
 ## Installation
 
@@ -83,20 +83,30 @@
 
 1. Clone this repo:
 ```
-git clone https://github.com/Aiffelton-foryou/Model.git
-cd Model
+git clone https://github.com/Aiffelton-foryou/EYEAR.git
+cd EYEAR
 ```
 2. Create Env
 ```
 python3 -m venv myenv
 myenv/Scripts/activate
 ```
-3. Start Server
+3. download checkpoint
+```
+#waveglow checkppoint
+mv waveglow djreact/mypj/app/tts_cp/waveglow/checkpoint
+
+#tacotron checkpoint
+mv tacotron djreact/mypj/app/tts_cp/waveglow/tacotron2/output
+```
+
+4. Start Server
 ```
 cd mypj
 python manage.py runserver 서버주소:8000
 ```
-4. Start Web Page
+
+5. Start Web Page
 ```
 cd FontEnd
 npm start
