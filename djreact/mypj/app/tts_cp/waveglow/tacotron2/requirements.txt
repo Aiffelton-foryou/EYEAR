@@ -1,0 +1,11 @@
+matplotlib==2.1.0
+# numpy==1.13.3
+numpy==1.16.4
+inflect==0.2.5
+librosa==0.6.0
+scipy==1.0.0
+Unidecode==1.0.22
+numba==0.48
+pillow
+
+python train.py   --output_directory=output   --log_directory=log   --n_gpus=1   --training_files=filelists/train_filelist.txt    --validation_files=filelists/train_filelist.txt   --epochs=10
